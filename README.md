@@ -13,4 +13,4 @@ Welcome to Go-Gears! This repository is a collection of handy Go utilities and l
 To use Go-Gears in your Go projects, just import the necessary packages like this:
 
 ```go
-import "github.com/CarlCao17/go-gears/packagename"
+import "github.com/CarlCao17/go-gears/cmd/packagename"

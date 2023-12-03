@@ -1,6 +1,8 @@
-package fetch
+package main
 
 import (
+	"flag"
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -27,4 +29,17 @@ func fetch(url string) (filename string, n int64, err error) {
 		err = closeErr
 	}
 	return local, n, err
+}
+
+func main() {
+	flag.Usage = func() {
+		fmt.Fprintf(flag.CommandLine.Output(), "Usage: %s <url>\n", os.Args[0])
+		flag.PrintDefaults()
+	}
+	flag.Parse()
+
+	if len(flag.Args()) > 1 {
+		flag.Usage()
+	}
+	fetch(flag.Arg(0))
 }

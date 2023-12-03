@@ -1,6 +1,6 @@
 BIN_DIR := $(abspath ./bin)
 SRC_DIR := $(abspath ./cmd)
-GOOS := linux
+GOOS := darwin
 GOARCH := amd64
 CGO_DISABLED := 0
 
