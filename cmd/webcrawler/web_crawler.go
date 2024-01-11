@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"go_src/pkg/links"
+	"github.com/CarlCao17/go-gears/pkg/links"
 )
 
 func breadthFirst(f func(item string) []string, worklist []string) {
